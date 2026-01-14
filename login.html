@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login form</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripit.js"></script>
+</head>
+<body>
+ <div class="login-card">
+
+    <!-- LOGIN FORM -->
+    <div id="loginForm">
+        <h2>Login</h2>
+
+        <form onsubmit="return validateLogin()">
+            <input type="text" id="loginUsername" class="input-box" placeholder="Username" required>
+            <input type="password" id="loginPassword" class="input-box" placeholder="Password" required minlength="6">
+
+            <div class="options">
+                <a onclick="forgotPassword()">Forgot password?</a>
+            </div>
+
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+
+        <div class="create">
+            Don’t have an account? <a onclick="showSignup()">Sign Up</a>
+        </div>
+    </div>
+
+    <!-- SIGN UP FORM -->
+    <div id="signupForm" class="hidden">
+        <h2>Sign Up</h2>
+
+        <form onsubmit="return validateSignup()">
+            <input type="text" id="signupUsername" class="input-box" placeholder="Username" required>
+            <input type="password" id="signupPassword" class="input-box" placeholder="Password" required minlength="6">
+            <input type="password" id="confirmPassword" class="input-box" placeholder="Confirm Password" required minlength="6">
+
+            <button type="submit" class="login-btn">Create Account</button>
+        </form>
+
+        <div class="create">
+            Already have an account? <a onclick="showLogin()">Login</a>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
